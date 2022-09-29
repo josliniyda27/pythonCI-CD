@@ -1,0 +1,3 @@
+[submodule "django-github-actions-aws"]
+	path = django-github-actions-aws
+	url = https://github.com/Nyior/django-github-actions-aws.git
