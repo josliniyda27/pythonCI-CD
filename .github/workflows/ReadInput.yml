@@ -1,21 +1,19 @@
-name: PROMPT_INPUT_Workflow
+name: READINPUTWorkflow
 
-on: 
-  workflow_dispatch:
-    inputs:
-      filename: 
-      description: 'Enter the file name:'
-      default: 'hello'
-      required: true
+on:
+  push
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Prompt for FileName variable
-        run: |
-          excelfilename=${{github.event.inputs.filename}}"
-          echo "You entered: ${{excelfilename}}
+      - name: Prompt for Input
+        run: echo "Please enter a value"
+        shell: bash
+      - name: Run My Command
+        run: echo ${{ github.event.inputs.myinput }}
+        env:
+          MY_INPUT: ${{ github.event.inputs.myinput }}
+
+
     
