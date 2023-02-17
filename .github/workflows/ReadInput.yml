@@ -1,12 +1,11 @@
 name: READINPUTWorkflow
 
 on: 
-  push:
+  workflow_dispatch:
     inputs:
       filename:
         description: 'Enter file name'     
         required: true
-        #default: 'prod'
 
 jobs:
   build:
