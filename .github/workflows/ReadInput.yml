@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
     inputs:
       filename: 
-      description: "Enter the file name:"
-      default: hello
+      description: 'Enter the file name:'
+      default: 'hello'
       required: true
 
 jobs:
