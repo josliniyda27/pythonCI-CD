@@ -1,7 +1,7 @@
 name: READINPUTWorkflow
 
 on: 
-  workflow_dispatch:
+  push:
     inputs:
       filename:
         description: 'Enter file name'     
