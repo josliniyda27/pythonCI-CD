@@ -1,0 +1,15 @@
+name: PROMPT_INPUT_Workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Prompt for FileName variable
+      run: |
+        echo "Please enter the value for FileName: "
+        read FileName
+        echo "You entered: $FileName"
+    
