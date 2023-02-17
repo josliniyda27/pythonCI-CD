@@ -16,7 +16,7 @@ jobs:
         env:
           FILE_NAME: ${{ github.event.inputs.filename }}
         run: |
-          echo ${{ FILE_NAME }}
+          echo ${{ env.FILE_NAME }}
         
 
 
