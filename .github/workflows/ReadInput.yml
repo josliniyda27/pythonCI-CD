@@ -15,7 +15,7 @@ jobs:
         env:
           FILE_NAME: ${{ github.event.inputs.filename }}
         run: |
-          echo ${{ env.FILE_NAME }}
+          echo "File name entered is ${{ env.FILE_NAME }}"
         
 
 
