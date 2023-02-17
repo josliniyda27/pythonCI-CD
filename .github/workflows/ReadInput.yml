@@ -1,7 +1,16 @@
 name: READINPUTWorkflow
 
-on:
-  push
+on: 
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Define env name'     
+        required: true
+        default: 'prod'
+      branch:
+        description: 'Define branch name'     
+        required: true
+        default: 'master'
 
 jobs:
   build:
@@ -11,9 +20,12 @@ jobs:
         run: echo "Please enter a value"
         shell: bash
       - name: Run My Command
-        run: echo ${{ github.event.inputs.myinput }}
+        run: |
+          echo ${{ github.event.inputs.environment }}
+          echo ${{ github.event.inputs.branch }}
         env:
-          MY_INPUT: ${{ github.event.inputs.myinput }}
+          MY_ENV: ${{ github.event.inputs.environment }}
+          MY_BR: ${{ github.event.inputs.branch }}
 
 
     
