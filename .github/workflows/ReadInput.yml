@@ -1,4 +1,4 @@
-name: READINPUTWorkflow
+name: PROMPT_INPUT_Workflow
 
 on: 
   workflow_dispatch:
